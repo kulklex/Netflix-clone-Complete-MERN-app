@@ -5,12 +5,16 @@ const dotenv = require("dotenv");
 const bodyParser = require("body-parser")
 
 dotenv.config();
+app.use(bodyParser.json())
+app.use(express.json())
 
+
+
+//routers
 const auth = require("./routes/auth")
 const users = require("./routes/users")
 
-app.use(bodyParser.json())
-app.use(express.json())
+
 app.use("/auth", auth)
 app.use("/users", users)
 

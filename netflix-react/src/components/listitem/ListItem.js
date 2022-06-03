@@ -14,7 +14,7 @@ export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
   const [movie, setMovie] = useState({}) 
   useEffect(() => {
-   const getMovie = () => {
+   const getMovie = async () => {
     axios.get(`movies/find/${item}`,
     { headers: {
       token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTYwNjdhNjViMjcyMDJjYjY0ODNlYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1NDA4NTMzNiwiZXhwIjoxNjU0NTE3MzM2fQ.Yapi5S5049fmZOzDRDBiZJr9T07mR_ZLobffFCBJiOU"

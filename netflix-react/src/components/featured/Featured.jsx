@@ -9,7 +9,7 @@ export default function Featured({ type }) {
 
 
   useEffect(()=>{
-    const getRandomContent =  () => {
+    const getRandomContent = async () => {
       axios.get(`/movies/random?type=${type}`,
       { headers: {
         token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTYwNjdhNjViMjcyMDJjYjY0ODNlYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1NDA4NTMzNiwiZXhwIjoxNjU0NTE3MzM2fQ.Yapi5S5049fmZOzDRDBiZJr9T07mR_ZLobffFCBJiOU"
